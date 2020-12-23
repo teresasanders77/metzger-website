@@ -10,22 +10,17 @@ function HeroSection() {
       <video className='videoTag' autoPlay loop muted>
         <source src={Video} type='video/mp4' />
       </video>
-      <h1>ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p>
+      <h1>LIFE COACHING</h1>
+      <p>with</p>
+      <h2>Katherine Metzger</h2>
+      <h3>Certified High Performance Coach</h3>
       <div className="hero-btns">
         <Button
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
-          GET STARTED
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-        >
-          WATCH TRAILER <i className='far fa-play-circle' />
+          START YOUR JOURNEY
         </Button>
       </div>
     </div>

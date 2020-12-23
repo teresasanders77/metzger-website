@@ -24,6 +24,16 @@ video {
   margin-top: -100px; 
 }
 
+.hero-container > h2 {
+  color: #fff;
+  font-size: 75px; 
+}
+
+.hero-container > h3 {
+  color: #fff;
+  font-size: 25px; 
+}
+
 .hero-container > p {
   margin-top: 8px; 
   color: #fff;
