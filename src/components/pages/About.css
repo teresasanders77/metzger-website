@@ -1,0 +1,47 @@
+.about {
+  display: flex;
+  width: 100%; 
+}
+
+.about h2 {
+  text-align: center;
+  background: rgb(83, 108, 140);
+  font-size: 40px; 
+  color: #fff; 
+}
+
+.about img {
+  height: 75%; 
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about p {
+  text-align: center;
+  background-color: #F0FFFF;
+  height: 100%;
+  font-size: 20px; 
+  line-height: 35px; 
+  padding-right: 13%; 
+  padding-left: 13%; 
+  padding-top: 3%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column1 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1; 
+}
+
+.column2 {
+  background-color: #F0FFFF;
+}
