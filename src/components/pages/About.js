@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import './About.css';
 import headshot from '../../images/img-10.jpg';
+import skydiving from '../../images/img-11.jpg';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -13,7 +14,7 @@ function About() {
     <div className='about'>
       <h2>About Me</h2>
       <div data-aos="fade-down">
-        <img src={headshot} alt="Katie Headshot" />
+        <img src={headshot} className="headshot" alt="Katie Headshot" />
       </div>
       <div data-aos="fade-up">
         <p>When I lost my long-term relationship and then my job (both of which were emotionally abusive), I was left with a feeling of worthlessness and a vast, empty numbness. Have you ever felt that way? It's terrible! I went through a depression where I tried many avenues to heal, including therapy, medication, and distraction. When the outside world wasn't working, I knew I had to turn inward, to myself!<br /><br />
@@ -22,7 +23,26 @@ function About() {
           I researched (and was certified in) more than one Life Coaching program, including the highest-level coaching certification in the world, so I could better serve those who need a little support along the way!
           </p>
       </div>
-    </div>
+      <div style={{
+        backgroundImage: `url(${skydiving})`,
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 125%',
+        backgroundPosition: 'center top',
+        width: '100vw',
+        height: '900px',
+      }}>
+        <figure flass="quote">
+          <q>
+            The biggest adventure you can take <br />
+            is to live the life of your dreams.
+        </q>
+          <figcaption>
+            <cite> Oprah Winfrey</cite>
+          </figcaption>
+        </figure>
+      </div>
+    </div >
   )
 }
 
