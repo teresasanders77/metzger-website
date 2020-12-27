@@ -1,6 +1,10 @@
 .about {
   display: flex;
   width: 100%; 
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1; 
+  background-color: #F0FFFF;
 }
 
 .about h2 {
@@ -11,8 +15,10 @@
 }
 
 .about img {
-  height: 75%; 
+  height: 400px; 
+  border-radius: 50%;
   display: block;
+  margin-top: 3%; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -20,28 +26,12 @@
 .about p {
   text-align: center;
   background-color: #F0FFFF;
+  color:rgb(36, 62, 83);
   height: 100%;
-  font-size: 20px; 
-  line-height: 35px; 
-  padding-right: 13%; 
-  padding-left: 13%; 
+  font-size: 18px; 
+  line-height: 25px; 
+  padding-right: 3%; 
+  padding-left: 3%; 
   padding-top: 3%;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.column1 {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1; 
-}
-
-.column2 {
-  background-color: #F0FFFF;
+  padding-bottom: 3%; 
 }
