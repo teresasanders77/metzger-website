@@ -1,6 +1,14 @@
+.testimonials h2 {
+  text-align: center;
+  background: rgb(83, 108, 140);
+  font-size: 30px; 
+  color: #fff; 
+  border-bottom: 2px solid #fff
+}
+
 .carousel-root {
   width: 100% !important;
-  height: 90vh !important; 
+  height: 87vh !important; 
   margin: auto !important;
   background:rgb(83, 108, 140) !important;
 }
