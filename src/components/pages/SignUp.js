@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './SignUp.css';
 import { db } from '../../firebase.js';
+import emailjs from 'emailjs-com';
+
+
+
 
 const SignUp = () => {
   const [name, setName] = useState('');
@@ -29,10 +33,19 @@ const SignUp = () => {
         setLoader(false);
       });
 
+    emailjs.sendForm('service_thog09r', 'template_05qq247', e.target, 'user_gPHNoNvHZXPJbxdR46FjF')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+
     setName('');
     setEmail('');
     setPhone('');
     setMessage('');
+
+
   };
 
   return (
