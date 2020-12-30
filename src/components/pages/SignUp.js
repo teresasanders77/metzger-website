@@ -1,94 +1,71 @@
-import React, { useState } from 'react';
-import './SignUp.css';
-import { db } from '../../firebase.js';
-import emailjs from 'emailjs-com';
-
-
-
+import React, { useState } from 'react'
+import { Axios, db } from '../../firebase/firebaseConfig'
+import './SignUp.scss'
 
 const SignUp = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({})
 
-  const [loader, setLoader] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoader(true);
-
-    db.collection('emails').add({
-      name: name,
-      email: email,
-      phone: phone,
-      message: message,
+  const updateInput = e => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
     })
-      .then(() => {
-        alert('Message has been submitted');
-        setLoader(false);
+  }
+  const handleSubmit = event => {
+    event.preventDefault()
+    sendEmail()
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    })
+  }
+  const sendEmail = () => {
+    Axios.post(
+      'https://us-central1-metzger-website.cloudfunctions.net/submit',
+      formData
+    )
+      .then(res => {
+        db.collection('emails').add({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          time: new Date(),
+        })
       })
       .catch(error => {
-        alert(error.message);
-        setLoader(false);
-      });
-
-    emailjs.sendForm('service_thog09r', 'template_05qq247', e.target, 'user_gPHNoNvHZXPJbxdR46FjF')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-
-    setName('');
-    setEmail('');
-    setPhone('');
-    setMessage('');
-
-
-  };
+        console.log(error)
+      })
+  }
 
   return (
-    <div className="signUp">
-      <h2>Contact Me</h2>
-
-      <form method="POST" className="form" onSubmit={handleSubmit}>
-
-        <label>Name</label>
+    <>
+      <form onSubmit={handleSubmit}>
         <input
+          type="text"
+          name="name"
           placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={updateInput}
+          value={formData.name || ''}
         />
-
-        <label>Email</label>
         <input
+          type="email"
+          name="email"
           placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={updateInput}
+          value={formData.email || ''}
         />
-
-        <label>Phone</label>
-        <input
-          placeholder="Phone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
-
-        <label>Message</label>
         <textarea
-          placeholder="Type your message here..."
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        >
-        </textarea>
-        <button type="submit" style={{ background: loader ? '#ccc' : 'rgb(2, 2, 110)' }}
-        >
-          Submit
-          </button>
+          type="text"
+          name="message"
+          placeholder="Message"
+          onChange={updateInput}
+          value={formData.message || ''}
+        ></textarea>
+        <button type="submit">Submit</button>
       </form>
-    </div>
+    </>
   )
 }
 
-export default SignUp;
+export default SignUp
