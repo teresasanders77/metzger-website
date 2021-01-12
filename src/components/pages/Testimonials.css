@@ -116,7 +116,7 @@
   }
   .myCarousel {
     background: #fafafa;
-    margin-top: -9%;
+    margin-top: 10%;
     width: 88%;
     margin-left: auto;
     margin-right: auto;
@@ -131,5 +131,11 @@
   .carousel .slide img {
     width: 24% !important;
     border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .myCarousel {
+    margin-top: 10%;
   }
 }
