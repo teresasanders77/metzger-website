@@ -13,44 +13,46 @@ export default class SignUp extends React.Component {
   render() {
     const { status } = this.state;
     return (
-      <div class="signUp">
-        <div class="row">
-          <h1>Contact Me</h1>
-        </div>
-        <div class="row">
-          <h4>I'd love to hear from you!</h4>
-        </div>
-        <div class="row input-container">
-          <div class="col-xs-12">
-            <div class="styled-input wide">
-              <input type="text" required />
-              <label>Name</label>
-            </div>
+      <form
+        onSubmit={this.submitForm}
+        action="https://formspree.io/f/xaylalyb"
+        method="POST"
+      >
+        <div class="signUp">
+          <div class="rowHeader">
+            <h1>Contact Me</h1>
           </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="styled-input">
-              <input type="text" required />
-              <label>Email</label>
+          <div class="row input-container">
+            <div class="col-xs-12">
+              <div class="styled-input wide">
+                <input type="text" name="name" />
+                <label>Name</label>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="styled-input">
-              <input type="text" required />
-              <label>Phone Number</label>
+            <div class="col-md-6 col-sm-12" style={{ marginRight: "60px" }}>
+              <div class="styled-input" >
+                <input type="text" name="email" />
+                <label>Email</label>
+              </div>
             </div>
-          </div>
-          <div class="col-xs-12">
-            <div class="styled-input wide">
-              <textarea required></textarea>
-              <label>Message</label>
+            <div class="col-md-6 col-sm-12" style={{ float: "right" }}>
+              <div class="styled-input" >
+                <input type="text" name="phone" />
+                <label>Phone Number</label>
+              </div>
             </div>
-          </div>
-          <div class="col-xs-12">
-            {status === "SUCCESS" ? <p>Thanks!</p> : <div class="btn-lrg submit-btn"><button>Submit</button></div>}
+            <div class="col-xs-12">
+              <div class="styled-input wide">
+                <textarea name="message" ></textarea>
+                <label>Message</label>
+              </div>
+            </div>
+            {status === "SUCCESS" ? <p>Thanks!</p> : <button class="btn-lrg submit-btn">Submit</button>}
             {status === "ERROR" && <p>Ooops! There was an error.</p>}
           </div>
         </div>
-      </div>
+      </form>
+
     );
   }
 
