@@ -123,19 +123,24 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  input,
+textarea {
+  width: 100vw;
+}
+
   .submit-btn {
       width:100%;
       float: none;
       text-align:center;
   }
-}
 
-input[type=checkbox] + label {
-color: #ccc;
-font-style: italic;
-} 
+  input[type=checkbox] + label {
+    color: #ccc;
+    font-style: italic;
+  } 
 
-input[type=checkbox]:checked + label {
-color: #f00;
-font-style: normal;
+  input[type=checkbox]:checked + label {
+    color: #f00;
+    font-style: normal;
+  }
 }

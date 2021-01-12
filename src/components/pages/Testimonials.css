@@ -105,21 +105,9 @@
 }
 
 @media only screen and (max-width: 934px) {
-  .carousel-root {
-    outline: 0;
-    width: 93% !important;
-    margin: auto !important;
-  }
-
-  .carousel.carousel-slider .control-arrow {
-    display: none !important;
-  }
   .myCarousel {
-    background: #fafafa;
     margin-top: 10%;
     width: 88%;
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 8%;
     padding-bottom: 12.5%;
     padding-left: 5%;
