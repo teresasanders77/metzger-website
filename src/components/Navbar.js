@@ -8,7 +8,10 @@ const scrollToRef = (ref) => window.scrollTo({ top: 0, left: 0, behavior: 'smoot
 
 function Navbar() {
   const myRef = useRef(null)
-  const executeScroll = () => scrollToRef(myRef)
+  const executeScroll = () => {
+    scrollToRef(myRef);
+    setClick(false);
+  }
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
