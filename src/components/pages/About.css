@@ -36,12 +36,24 @@
   padding-right: 3%; 
   padding-left: 3%; 
   padding-top: 3%;
-  padding-bottom: 3%; 
+  padding-bottom: 4%; 
 }
 
 figure {
   text-align: right; 
-  padding: 3%; 
+  padding: 2%; 
   color:#fff;
   font-size: 50px; 
+}
+
+@media screen and (max-width: 960px) {
+  figure {
+    font-size: 30px; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  figure {
+    font-size: 15px; 
+  }
 }

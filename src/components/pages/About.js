@@ -27,10 +27,9 @@ function About() {
         backgroundImage: `url(${skydiving})`,
         backgroundAttachment: 'fixed',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 125%',
-        backgroundPosition: 'center top',
-        width: '100vw',
-        height: '900px',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        height: '94vh'
       }}>
         <figure flass="quote">
           <q>
