@@ -32,7 +32,7 @@
 /* ///// inputs /////*/
 
 input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
-  font-size: 0.75em;
+  font-size: 1.0em;
   color: #fff;
   top: -5px;
   -webkit-transition: all 0.225s ease;
