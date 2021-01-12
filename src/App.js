@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/pages/Home';
@@ -20,6 +21,7 @@ function App() {
           <Route path='/testimonials' component={Testimonials} />
           <Route path='/sign-up' component={SignUp} />
         </Switch>
+        <Footer />
       </Router>
     </>
   );

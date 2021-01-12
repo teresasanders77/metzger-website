@@ -5,7 +5,6 @@ import CoachingProgram from './CoachingProgram';
 import About from './About';
 import Testimonials from './Testimonials';
 import SignUp from './SignUp';
-import Footer from '../Footer';
 
 function Home() {
   return (
@@ -15,7 +14,6 @@ function Home() {
       <CoachingProgram />
       <Testimonials />
       <SignUp />
-      <Footer />
     </>
   )
 }

@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
-import Logo from '../images/logo.png'
+import Logo from '../images/logo.png';
+
+const scrollToRef = (ref) => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
 function Footer() {
+  const myRef = useRef(null)
+  const executeScroll = () => {
+    scrollToRef(myRef);
+  }
+
   return (
     <div className='footer-container'>
       <div className='footer-links'>
@@ -13,9 +20,11 @@ function Footer() {
       <section className='social-media'>
         <div className='social-media-wrap'>
           <div className='footer-logo'>
-            <Link to='/' className='navbar-logo'>
-              <img src={Logo} alt="KM logo" height="140px" />
-            </Link>
+            <div ref={myRef}>
+              <Link to='/' className='navbar-logo' onClick={executeScroll}>
+                <img src={Logo} alt="KM logo" height="140px" />
+              </Link>
+            </div>
           </div>
           <div className='social-icons'>
             <Link
