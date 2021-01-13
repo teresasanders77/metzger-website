@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/metzger-website/static/css/main.708dfa42.chunk.css",
-    "main.js": "/metzger-website/static/js/main.b32e45fc.chunk.js",
-    "main.js.map": "/metzger-website/static/js/main.b32e45fc.chunk.js.map",
+    "main.js": "/metzger-website/static/js/main.dbb8d1e4.chunk.js",
+    "main.js.map": "/metzger-website/static/js/main.dbb8d1e4.chunk.js.map",
     "runtime-main.js": "/metzger-website/static/js/runtime-main.2eb29259.js",
     "runtime-main.js.map": "/metzger-website/static/js/runtime-main.2eb29259.js.map",
     "static/css/2.cee6eccb.chunk.css": "/metzger-website/static/css/2.cee6eccb.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.cee6eccb.chunk.css",
     "static/js/2.3de75156.chunk.js",
     "static/css/main.708dfa42.chunk.css",
-    "static/js/main.b32e45fc.chunk.js"
+    "static/js/main.dbb8d1e4.chunk.js"
   ]
 }
