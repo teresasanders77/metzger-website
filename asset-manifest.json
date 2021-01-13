@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/metzger-website/static/css/main.708dfa42.chunk.css",
-    "main.js": "/metzger-website/static/js/main.d70b3057.chunk.js",
-    "main.js.map": "/metzger-website/static/js/main.d70b3057.chunk.js.map",
+    "main.js": "/metzger-website/static/js/main.b32e45fc.chunk.js",
+    "main.js.map": "/metzger-website/static/js/main.b32e45fc.chunk.js.map",
     "runtime-main.js": "/metzger-website/static/js/runtime-main.2eb29259.js",
     "runtime-main.js.map": "/metzger-website/static/js/runtime-main.2eb29259.js.map",
     "static/css/2.cee6eccb.chunk.css": "/metzger-website/static/css/2.cee6eccb.chunk.css",
-    "static/js/2.0d48e894.chunk.js": "/metzger-website/static/js/2.0d48e894.chunk.js",
-    "static/js/2.0d48e894.chunk.js.map": "/metzger-website/static/js/2.0d48e894.chunk.js.map",
+    "static/js/2.3de75156.chunk.js": "/metzger-website/static/js/2.3de75156.chunk.js",
+    "static/js/2.3de75156.chunk.js.map": "/metzger-website/static/js/2.3de75156.chunk.js.map",
     "index.html": "/metzger-website/index.html",
     "static/css/2.cee6eccb.chunk.css.map": "/metzger-website/static/css/2.cee6eccb.chunk.css.map",
     "static/css/main.708dfa42.chunk.css.map": "/metzger-website/static/css/main.708dfa42.chunk.css.map",
-    "static/js/2.0d48e894.chunk.js.LICENSE.txt": "/metzger-website/static/js/2.0d48e894.chunk.js.LICENSE.txt",
+    "static/js/2.3de75156.chunk.js.LICENSE.txt": "/metzger-website/static/js/2.3de75156.chunk.js.LICENSE.txt",
     "static/media/App.css": "/metzger-website/static/media/img-8.fabdf94d.jpg",
     "static/media/img-10.32315837.jpg": "/metzger-website/static/media/img-10.32315837.jpg",
     "static/media/img-11.51219764.jpg": "/metzger-website/static/media/img-11.51219764.jpg",
@@ -20,8 +20,8 @@
   "entrypoints": [
     "static/js/runtime-main.2eb29259.js",
     "static/css/2.cee6eccb.chunk.css",
-    "static/js/2.0d48e894.chunk.js",
+    "static/js/2.3de75156.chunk.js",
     "static/css/main.708dfa42.chunk.css",
-    "static/js/main.d70b3057.chunk.js"
+    "static/js/main.b32e45fc.chunk.js"
   ]
 }
