@@ -23,15 +23,15 @@ function About() {
           I researched (and was certified in) more than one Life Coaching program, including the highest-level coaching certification in the world, so I could better serve those who need a little support along the way!
           </p>
       </div>
-      <div style={{
+      <div className="backgroundImage" style={{
         backgroundImage: `url(${skydiving})`,
         backgroundAttachment: 'fixed',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'center center',
-        height: '94vh'
+        backgroundPosition: 'center',
+        paddingBottom: '35%'
       }}>
-        <figure flass="quote">
+        <figure class="quote">
           <q>
             The biggest adventure you can take <br />
             is to live the life of your dreams.
