@@ -52,7 +52,7 @@ figure {
   }
   
   .backgroundImage {
-    padding-bottom: 50% !important; 
+    display: none;  
   }
 }
 
@@ -62,7 +62,6 @@ figure {
   }
 
   .backgroundImage {
-    padding-bottom: 75% !important; 
-    width: 100%; 
+    display: none;  
   }
 }
