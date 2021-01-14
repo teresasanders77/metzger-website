@@ -1,3 +1,4 @@
+/* eslint-disable no-multi-str */
 import React from 'react';
 import './CoachingProgram.css';
 import {

@@ -7,9 +7,8 @@
 
 .app {
   overflow-x: hidden;
+  overflow-y: hidden; 
 }
-
-
 
 .home,
 .services,
