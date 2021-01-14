@@ -5,6 +5,12 @@
   font-family: 'PT Sans', sans-serif;
 }
 
+.app {
+  overflow-x: hidden;
+}
+
+
+
 .home,
 .services,
 .products,

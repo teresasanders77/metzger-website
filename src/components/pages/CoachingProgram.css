@@ -92,13 +92,51 @@
 
 
 @media screen and (max-width: 960px) {
-  .services h1 {
-    margin-top: -20%; 
+  .services {
+    padding-top: 25% !important; 
+    height: 5%; 
+  }
+
+  .services p {
+    padding-top: 25% !important;
+  }
+
+  .bgMain {
+    padding-top: 25% !important;
+    padding-bottom: 50%; 
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em;
+    grid-row-gap: 100px;
+  }
+
+  .services__box {
+    padding: 80px; 
+    margin: -40px; 
   }
 }
 
 @media screen and (max-width: 768px) {
-  .services h1 {
-    margin-top: -25%;
+  .services {
+    padding-top: 25% !important;  
+    height: 5%; 
+  }
+
+  .services p {
+    padding-top: 25% !important;
+  }
+
+  .bgMain {
+    padding-top: 25% !important;
+    padding-bottom: 50%; 
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em;
+    grid-row-gap: 100px;
+  }
+
+  .services__box {
+    padding: 80px; 
+    margin: -40px; 
   }
 }

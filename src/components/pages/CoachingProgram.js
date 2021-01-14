@@ -4,9 +4,6 @@ import {
   FaGithub,
   FaCamera,
   FaCircleNotch,
-  FaApple,
-  FaFileVideo,
-  FaSearchDollar,
 } from "react-icons/fa";
 
 const CoachingProgram = () => {

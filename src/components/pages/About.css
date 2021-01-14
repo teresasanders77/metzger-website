@@ -50,10 +50,19 @@ figure {
   figure {
     font-size: 30px; 
   }
+  
+  .backgroundImage {
+    padding-bottom: 50% !important; 
+  }
 }
 
 @media screen and (max-width: 768px) {
   figure {
     font-size: 15px; 
+  }
+
+  .backgroundImage {
+    padding-bottom: 75% !important; 
+    width: 100%; 
   }
 }
