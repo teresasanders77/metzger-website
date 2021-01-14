@@ -53,22 +53,22 @@ function Navbar() {
               </li>
             </div>
             <li className='nav-item'>
-              <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/about' className='nav-links' onClick={executeScroll}>
                 About Me
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/coachingProgram' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/coachingProgram' className='nav-links' onClick={executeScroll}>
                 Coaching Program
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/testimonials' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/testimonials' className='nav-links' onClick={executeScroll}>
                 Testimonials
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {button && <Button buttonStyle='btn--outline' onClick={executeScroll}>SIGN UP</Button>}
         </div>
       </nav>
     </>
