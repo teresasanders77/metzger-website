@@ -124,6 +124,14 @@ export class FormUserDetails extends Component {
               fullWidth
             />
             <br />
+            <TextField
+              placeholder="Description"
+              label="Please briefly describe how you heard about my coaching services and why you would like a Strategy Session with me:"
+              onChange={handleChange('description')}
+              defaultValue={values.description}
+              margin="normal"
+              fullWidth
+            />
             <Button
               color="primary"
               variant="contained"
