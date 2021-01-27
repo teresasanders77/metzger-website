@@ -8,7 +8,6 @@ import About from './components/pages/About';
 import CoachingProgram from './components/pages/CoachingProgram';
 import Testimonials from './components/pages/Testimonials';
 import SignUp from './components/pages/SignUp';
-import Questionnaire from './components/pages/Questionnaire';
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
             <Route path='/coachingProgram' component={CoachingProgram} />
             <Route path='/testimonials' component={Testimonials} />
             <Route path='/sign-up' component={SignUp} />
-            <Route path='/questionnaire' component={Questionnaire} />
           </div>
         </Switch>
         <Footer />
