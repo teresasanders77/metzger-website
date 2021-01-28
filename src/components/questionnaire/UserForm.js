@@ -3,6 +3,8 @@ import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
 import FormPersonalDetails2 from './FormPersonalDetails2';
 import HighPerformance from './HighPerformance';
+import Confirm from './Confirm';
+import Success from './Success';
 
 export class UserForm extends Component {
   state = {
@@ -136,7 +138,6 @@ export class UserForm extends Component {
       whyStudent
     }
 
-    // eslint-disable-next-line default-case
     switch (step) {
       case 1:
         return (
@@ -174,9 +175,16 @@ export class UserForm extends Component {
           />
         );
       case 5:
-        return <h1>Confirm</h1>
+        return (
+          <Confirm
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            values={values} />
+        )
       case 6:
-        return <h1>Success</h1>
+        return <Success />
+      default:
+        (console.log('This is multi step form with react'))
     }
   }
 }
