@@ -5,11 +5,7 @@ import { createMuiTheme, ThemeProvider as MuiThemeProvider } from '@material-ui/
 import { orange } from '@material-ui/core/colors';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Radio from '@material-ui/core/Radio';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
@@ -122,7 +118,6 @@ export class FormPersonalDetails extends Component {
             <br /><br /><br />
             <FormLabel component="legend">What do you do for a living, and why did you choose that career?</FormLabel>
             <TextField
-              placeholder="Occupation"
               onChange={handleChange('doForLiving')}
               defaultValue={values.doForLiving}
               margin="normal"
@@ -133,7 +128,6 @@ export class FormPersonalDetails extends Component {
             <br /><br />
             <FormLabel component="legend">What are your top 3 goals you are striving to achieve right now?</FormLabel>
             <TextField
-              placeholder="Goals"
               onChange={handleChange('threeGoals')}
               defaultValue={values.threeGoals}
               margin="normal"
@@ -144,7 +138,6 @@ export class FormPersonalDetails extends Component {
             <br /><br />
             <FormLabel component="legend">What major stressors or challenges are you struggling with right now?</FormLabel>
             <TextField
-              placeholder="Stressors"
               onChange={handleChange('stressors')}
               defaultValue={values.stressors}
               margin="normal"
@@ -155,7 +148,6 @@ export class FormPersonalDetails extends Component {
             <br /><br />
             <FormLabel component="legend">When you feel like your most successful and happy self, what makes you feel that way?</FormLabel>
             <TextField
-              placeholder="Successful"
               onChange={handleChange('successful')}
               defaultValue={values.successful}
               margin="normal"

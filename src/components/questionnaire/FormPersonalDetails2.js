@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-import Dialog from '@material-ui/core/Dialog';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { createMuiTheme, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { orange } from '@material-ui/core/colors';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import FormLabel from '@material-ui/core/FormLabel';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 
 const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: 'rgb(83, 108, 140)'
+    }
+  },
   status: {
     danger: orange[500],
   },
@@ -29,74 +36,89 @@ export class FormPersonalDetails2 extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <>
-          <Dialog
-            open
-            fullWidth
-            maxWidth='sm'
-          >
-            <AppBar position="static">
+          <Box px={55} my={3}>
+            <AppBar
+              position="static"
+              style={{ background: 'rgb(83, 108, 140)' }}
+            >
               <Toolbar variant="dense">
-                QUESTIONNAIRE FOR YOUR COACHING STRATEGY SESSION
-                            </Toolbar>
+                <Typography
+                  variant="h6"
+                  style={{
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                  }}
+                >
+                  QUESTIONNAIRE FOR YOUR COACHING STRATEGY SESSION
+                </Typography>
+              </Toolbar>
             </AppBar>
+            <br /><br /><br />
+            <FormLabel component="legend">What would your dream life look like if you could wave a wand and make it happen?</FormLabel>
             <TextField
-              placeholder="Dream Life"
-              label="What would your dream life look like if you could wave a wand and make it happen?"
               onChange={handleChange('dreamLife')}
               defaultValue={values.dreamLife}
               margin="normal"
               fullWidth
+              multiline
+              variant="outlined"
             />
-            <br />
+            <br /><br />
+            <FormLabel component="legend">What else has prevented you from having that dream life?</FormLabel>
             <TextField
-              placeholder="Prevent"
-              label="What else has prevented you from having that dream life?"
               onChange={handleChange('prevent')}
               defaultValue={values.prevent}
               margin="normal"
               fullWidth
-
+              multiline
+              variant="outlined"
             />
-            <br />
+            <br /><br />
+            <FormLabel component="legend">What goal or dream have you ever given up on or failed at, and what do you believe caused you to stop or fail?</FormLabel>
             <TextField
-              placeholder="Fail"
-              label="What goal or dream have you ever given up on or failed at, and what do you believe caused you to stop or fail?"
               onChange={handleChange('goalFail')}
               defaultValue={values.goalFail}
               margin="normal"
               fullWidth
+              multiline
+              variant="outlined"
             />
-            <br />
+            <br /><br />
+            <FormLabel component="legend">What 3 big changes would you like to make in your life in the next 12 months?</FormLabel>
             <TextField
-              placeholder="Changes"
-              label="What 3 big changes would you like to make in your life in the next 12 months?"
               onChange={handleChange('threeChanges')}
               defaultValue={values.threeChanges}
               margin="normal"
               fullWidth
+              multiline
+              variant="outlined"
             />
-            <br />
+            <br /><br />
+            <FormLabel component="legend">What are you most proud of and excited about in your life?</FormLabel>
             <TextField
-              placeholder="Excited"
-              label="What are you most proud of and excited about in your life?"
               onChange={handleChange('proud')}
               defaultValue={values.proud}
               margin="normal"
               fullWidth
+              multiline
+              variant="outlined"
             />
-            <Button
-              size="large"
-              color="secondary"
-              variant="contained"
-              onClick={this.continue}
-            >Continue</ Button>
-            <Button
-              size="large"
-              color="secondary"
-              variant="contained"
-              onClick={this.back}
-            >Back</ Button>
-          </Dialog>
+            <Box textAlign='center'>
+              <Button
+                size="large"
+                color="main"
+                variant="contained"
+                onClick={this.back}
+              >Back</ Button>
+              &nbsp;&nbsp;&nbsp;
+              <Button
+                size="large"
+                color="main"
+                variant="contained"
+                onClick={this.continue}
+              >Continue</ Button>
+            </Box>
+          </Box>
         </>
       </MuiThemeProvider>
     )
