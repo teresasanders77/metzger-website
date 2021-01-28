@@ -124,12 +124,14 @@ export class HighPerformance extends Component {
               fullWidth
             />
             <Button
-              color="primary"
+              size="large"
+              color="secondary"
               variant="contained"
               onClick={this.continue}
             >Continue</ Button>
             <Button
-              color="primary"
+              size="large"
+              color="secondary"
               variant="contained"
               onClick={this.back}
             >Back</ Button>

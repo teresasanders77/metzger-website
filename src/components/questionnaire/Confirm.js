@@ -62,11 +62,13 @@ export class Confirm extends Component {
             </List>
             <br />
             <Button
-              color="primary"
+              size="large"
+              color="secondary"
               variant="contained"
               onClick={this.continue}
             >Confirm & Continue </Button>
             <Button
+              size="large"
               color="secondary"
               variant="contained"
               onClick={this.back}

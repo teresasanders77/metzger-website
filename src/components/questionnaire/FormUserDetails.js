@@ -6,6 +6,11 @@ import { createMuiTheme, ThemeProvider as MuiThemeProvider } from '@material-ui/
 import { orange } from '@material-ui/core/colors';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Radio from '@material-ui/core/Radio';
 
 const theme = createMuiTheme({
   status: {
@@ -19,7 +24,7 @@ export class FormUserDetails extends Component {
     this.props.nextStep();
   }
   render() {
-    const { values, handleChange } = this.props;
+    const { value, values, handleChange } = this.props;
     return (
       <MuiThemeProvider theme={theme}>
         <>
@@ -106,23 +111,44 @@ export class FormUserDetails extends Component {
               fullWidth
             />
             <br />
-            <TextField
-              placeholder="Enter your Gender"
-              label="Gender"
-              onChange={handleChange('gender')}
-              defaultValue={values.gender}
-              margin="normal"
-              fullWidth
-            />
+            <FormControl component="fieldset">
+              <FormLabel component="legend">Gender</FormLabel>
+              <RadioGroup aria-label="gender" name="gender" value={value} onChange={handleChange('gender')} style={{ display: 'initial' }}>
+                <FormControlLabel
+                  value="female"
+                  control={<Radio />}
+                  label="Female" />
+                <FormControlLabel
+                  value="male"
+                  control={<Radio />}
+                  label="Male" />
+                <FormControlLabel
+                  value="other"
+                  control={<Radio />}
+                  label="Other" />
+              </RadioGroup>
+            </FormControl>
             <br />
-            <TextField
-              placeholder="Enter your Marriage Status"
-              label="Marriage Status"
-              onChange={handleChange('marriageStatus')}
-              defaultValue={values.marriageStatus}
-              margin="normal"
-              fullWidth
-            />
+            <FormControl component="fieldset">
+              <FormLabel component="legend">Marriage Status</FormLabel>
+              <RadioGroup aria-label="marriageStatus" name="marriageStatus" style={{ display: 'initial' }}>
+                <FormControlLabel
+                  value="married"
+                  control={<Radio />}
+                  label="Married"
+                />
+                <FormControlLabel
+                  value="single"
+                  control={<Radio />}
+                  label="Single"
+                />
+                <FormControlLabel
+                  value="divorced"
+                  control={<Radio />}
+                  label="Divorced"
+                />
+              </RadioGroup>
+            </FormControl>
             <br />
             <TextField
               placeholder="Description"
@@ -133,7 +159,8 @@ export class FormUserDetails extends Component {
               fullWidth
             />
             <Button
-              color="primary"
+              size="large"
+              color="secondary"
               variant="contained"
               onClick={this.continue}
             >Continue</ Button>
