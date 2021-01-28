@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import FormUserDetails from './FormUserDetails';
+import FormPersonalDetails from './FormPersonalDetails';
+import FormPersonalDetails2 from './FormPersonalDetails2';
+import HighPerformance from './HighPerformance';
 
 export class UserForm extends Component {
   state = {
@@ -142,12 +145,37 @@ export class UserForm extends Component {
             handleChange={this.handleChange}
             values={values}
           />
-        )
+        );
       case 2:
-        return <h1>FormPersonalDetails</h1>
+        return (
+          <FormPersonalDetails
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
       case 3:
-        return <h1>Confirm</h1>
+        return (
+          <FormPersonalDetails2
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
       case 4:
+        return (
+          <HighPerformance
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
+      case 5:
+        return <h1>Confirm</h1>
+      case 6:
         return <h1>Success</h1>
     }
   }

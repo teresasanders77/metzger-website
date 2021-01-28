@@ -120,7 +120,7 @@ export class FormPersonalDetails extends Component {
             <TextField
               placeholder="Successful"
               label="When you feel like your most successful and happy self, what makes you feel that way?"
-              onChange={handleChange(' successful')}
+              onChange={handleChange('successful')}
               defaultValue={values.successful}
               margin="normal"
               fullWidth
@@ -130,6 +130,11 @@ export class FormPersonalDetails extends Component {
               variant="contained"
               onClick={this.continue}
             >Continue</ Button>
+            <Button
+              color="primary"
+              variant="contained"
+              onClick={this.back}
+            >Back</ Button>
           </Dialog>
         </>
       </MuiThemeProvider>
