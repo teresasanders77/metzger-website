@@ -11,21 +11,18 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
 import Box from '@material-ui/core/Box';
-import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: 'rgb(83, 108, 140)'
+    }
+  },
   status: {
     danger: orange[500],
   },
 });
-
-const useStyles = makeStyles(theme => ({
-  title: {
-    flexGrow: 1,
-    textAlign: 'center',
-  },
-}));
 
 export class FormUserDetails extends Component {
   continue = e => {
@@ -38,7 +35,10 @@ export class FormUserDetails extends Component {
       <MuiThemeProvider theme={theme}>
         <>
           <Box px={70} my={3}>
-            <AppBar position="static">
+            <AppBar
+              position="static"
+              style={{ background: 'rgb(83, 108, 140)' }}
+            >
               <Toolbar variant="dense">
                 <Typography
                   variant="h6"
@@ -115,6 +115,7 @@ export class FormUserDetails extends Component {
               fullWidth
             />
             <br />
+            <br />
             <FormLabel component="legend">Date of Birth</FormLabel>
             <TextField
               type="date"
@@ -123,6 +124,7 @@ export class FormUserDetails extends Component {
               margin="normal"
               fullWidth
             />
+            <br />
             <br />
             <FormControl component="fieldset">
               <FormLabel component="legend">Gender</FormLabel>
@@ -141,6 +143,7 @@ export class FormUserDetails extends Component {
                   label="Other" />
               </RadioGroup>
             </FormControl>
+            <br />
             <br />
             <FormControl component="fieldset">
               <FormLabel component="legend">Marriage Status</FormLabel>
@@ -163,20 +166,25 @@ export class FormUserDetails extends Component {
               </RadioGroup>
             </FormControl>
             <br />
+            <br />
+            <FormLabel component="legend">Please briefly describe how you heard about my coaching services and why you would like a Strategy Session with me:</FormLabel>
             <TextField
               placeholder="Description"
-              label="Please briefly describe how you heard about my coaching services and why you would like a Strategy Session with me:"
               onChange={handleChange('description')}
               defaultValue={values.description}
               margin="normal"
               fullWidth
+              multiline
+              variant="outlined"
             />
-            <Button
-              size="large"
-              color="secondary"
-              variant="contained"
-              onClick={this.continue}
-            >Continue</ Button>
+            <Box textAlign='center'>
+              <Button
+                size="large"
+                color="main"
+                variant="contained"
+                onClick={this.continue}
+              >Continue</ Button>
+            </Box>
           </Box>
         </>
       </MuiThemeProvider>
