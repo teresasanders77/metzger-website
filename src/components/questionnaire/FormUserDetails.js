@@ -11,12 +11,21 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
 import Box from '@material-ui/core/Box';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 const theme = createMuiTheme({
   status: {
     danger: orange[500],
   },
 });
+
+const useStyles = makeStyles(theme => ({
+  title: {
+    flexGrow: 1,
+    textAlign: 'center',
+  },
+}));
 
 export class FormUserDetails extends Component {
   continue = e => {
@@ -31,8 +40,16 @@ export class FormUserDetails extends Component {
           <Box px={70} my={3}>
             <AppBar position="static">
               <Toolbar variant="dense">
-                QUESTIONNAIRE FOR YOUR COACHING STRATEGY SESSION
-                            </Toolbar>
+                <Typography
+                  variant="h6"
+                  style={{
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                  }}
+                >
+                  QUESTIONNAIRE FOR YOUR COACHING STRATEGY SESSION
+                </Typography>
+              </Toolbar>
             </AppBar>
             <TextField
               placeholder="Enter your Full Name"
