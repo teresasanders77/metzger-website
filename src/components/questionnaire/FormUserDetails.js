@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Dialog from '@material-ui/core/Dialog';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { createMuiTheme, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
@@ -11,6 +10,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
+import Box from '@material-ui/core/Box';
 
 const theme = createMuiTheme({
   status: {
@@ -28,11 +28,7 @@ export class FormUserDetails extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <>
-          <Dialog
-            open
-            fullWidth
-            maxWidth='sm'
-          >
+          <Box px={70} my={3}>
             <AppBar position="static">
               <Toolbar variant="dense">
                 QUESTIONNAIRE FOR YOUR COACHING STRATEGY SESSION
@@ -102,9 +98,9 @@ export class FormUserDetails extends Component {
               fullWidth
             />
             <br />
+            <FormLabel component="legend">Date of Birth</FormLabel>
             <TextField
-              placeholder="Enter your Date of Birth"
-              label="Date of Birth"
+              type="date"
               onChange={handleChange('dateOfBirth')}
               defaultValue={values.dateOfBirth}
               margin="normal"
@@ -164,7 +160,7 @@ export class FormUserDetails extends Component {
               variant="contained"
               onClick={this.continue}
             >Continue</ Button>
-          </Dialog>
+          </Box>
         </>
       </MuiThemeProvider>
     )
