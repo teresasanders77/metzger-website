@@ -39,6 +39,14 @@ const styles = {
       paddingBottom: '5%'
     },
   },
+  text: {
+    [theme.breakpoints.down('sm')]: {
+      padding: '60px'
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: '60px'
+    },
+  }
 }
 
 export class FormPersonalDetails extends Component {
@@ -81,6 +89,7 @@ export class FormPersonalDetails extends Component {
             </AppBar>
             <br /><br />
             <TextField
+              className={classes.text}
               placeholder="Please rate yourself on a scale from 1 (the lowest) to 10 (the highest)"
               label="Do you feel you are clear about who you are, your purpose, and the direction you want to
               go in life?"
@@ -93,6 +102,7 @@ export class FormPersonalDetails extends Component {
             />
             <br />
             <TextField
+              className={classes.text}
               placeholder="Please rate yourself on a scale from 1 (the lowest) to 10 (the highest)"
               label="Do you consistently have enough mental and physical energy needed to excel, accomplish
               your goals, and feel motivated and happy?"
@@ -106,6 +116,7 @@ export class FormPersonalDetails extends Component {
             />
             <br />
             <TextField
+              className={classes.text}
               placeholder="Please rate yourself on a scale from 1 (the lowest) to 10 (the highest)"
               label="Do you take action and consistently express who you truly are and what you truly think,
               need, and desire with the world?"
@@ -118,6 +129,7 @@ export class FormPersonalDetails extends Component {
             />
             <br />
             <TextField
+              className={classes.text}
               placeholder="Please rate yourself on a scale from 1 (the lowest) to 10 (the highest)"
               label="Are you consistently focused and effective, and are you good at minimizing distractions
               and maintaining priorities?"
@@ -130,6 +142,7 @@ export class FormPersonalDetails extends Component {
             />
             <br />
             <TextField
+              className={classes.text}
               placeholder="Please rate yourself on a scale from 1 (the lowest) to 10 (the highest)"
               label="Do you feel you have the social influence with your family, friends, and team needed to
               accomplish your goals?"
