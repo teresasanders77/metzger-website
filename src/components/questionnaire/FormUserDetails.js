@@ -12,17 +12,38 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
       main: 'rgb(83, 108, 140)'
-    }
-  },
-  status: {
-    danger: orange[500],
-  },
+    },
+    status: {
+      danger: orange[500],
+    },
+  }
 });
+
+const styles = {
+  root: {
+    [theme.breakpoints.down('sm')]: {
+      paddingRight: '5%',
+      paddingLeft: '5%',
+      paddingBottom: '5%'
+    },
+    [theme.breakpoints.up('md')]: {
+      paddingRight: '20%',
+      paddingLeft: '20%',
+      paddingBottom: '5%'
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingRight: '25%',
+      paddingLeft: '25%',
+      paddingBottom: '5%'
+    },
+  },
+}
 
 export class FormUserDetails extends Component {
   continue = e => {
@@ -35,11 +56,12 @@ export class FormUserDetails extends Component {
   }
 
   render() {
+    const { classes } = this.props;
     const { value, values, handleChange } = this.props;
     return (
       <MuiThemeProvider theme={theme}>
         <>
-          <Box px={70} my={3}>
+          <Box className={classes.root}>
             <AppBar
               position="static"
               style={{ background: 'rgb(83, 108, 140)' }}
@@ -198,4 +220,4 @@ export class FormUserDetails extends Component {
 }
 
 
-export default FormUserDetails;
+export default withStyles(styles)(FormUserDetails);
