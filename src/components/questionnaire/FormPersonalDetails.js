@@ -46,6 +46,9 @@ const styles = {
     [theme.breakpoints.up('md')]: {
       padding: '60px'
     },
+    [theme.breakpoints.up('lg')]: {
+      padding: '15px'
+    },
   }
 }
 
