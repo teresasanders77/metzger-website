@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 import FormLabel from '@material-ui/core/FormLabel';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
-
+import { withStyles } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   palette: {
@@ -20,6 +20,26 @@ const theme = createMuiTheme({
     danger: orange[500],
   },
 });
+
+const styles = {
+  root: {
+    [theme.breakpoints.down('sm')]: {
+      paddingRight: '5%',
+      paddingLeft: '5%',
+      paddingBottom: '5%'
+    },
+    [theme.breakpoints.up('md')]: {
+      paddingRight: '20%',
+      paddingLeft: '20%',
+      paddingBottom: '5%'
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingRight: '25%',
+      paddingLeft: '25%',
+      paddingBottom: '5%'
+    },
+  },
+}
 
 export class FormPersonalDetails extends Component {
   continue = e => {
@@ -37,11 +57,12 @@ export class FormPersonalDetails extends Component {
   }
 
   render() {
+    const { classes } = this.props;
     const { values, handleChange } = this.props;
     return (
       <MuiThemeProvider theme={theme}>
         <>
-          <Box px={55} my={3}>
+          <Box className={classes.root}>
             <AppBar
               position="static"
               style={{ background: 'rgb(83, 108, 140)' }}
@@ -182,4 +203,4 @@ export class FormPersonalDetails extends Component {
 }
 
 
-export default FormPersonalDetails;
+export default withStyles(styles)(FormPersonalDetails);

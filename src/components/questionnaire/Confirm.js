@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
+import { withStyles } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   palette: {
@@ -18,6 +19,26 @@ const theme = createMuiTheme({
     danger: orange[500],
   },
 });
+
+const styles = {
+  root: {
+    [theme.breakpoints.down('sm')]: {
+      paddingRight: '5%',
+      paddingLeft: '5%',
+      paddingBottom: '5%'
+    },
+    [theme.breakpoints.up('md')]: {
+      paddingRight: '20%',
+      paddingLeft: '20%',
+      paddingBottom: '5%'
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingRight: '25%',
+      paddingLeft: '25%',
+      paddingBottom: '5%'
+    },
+  },
+}
 
 export class Confirm extends Component {
   continue = e => {
@@ -36,6 +57,7 @@ export class Confirm extends Component {
   }
 
   render() {
+    const { classes } = this.props;
     const { values: {
       fullName,
       phoneNumber,
@@ -74,7 +96,7 @@ export class Confirm extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <>
-          <Box px={55} my={3}>
+          <Box className={classes.root}>
             <AppBar
               position="static"
               style={{ background: 'rgb(83, 108, 140)' }}
@@ -257,4 +279,4 @@ faster or more efficiently?"
 }
 
 
-export default Confirm;
+export default withStyles(styles)(Confirm);
