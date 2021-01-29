@@ -174,7 +174,7 @@ export class FormUserDetails extends Component {
             <br />
             <FormControl component="fieldset">
               <FormLabel component="legend">Marriage Status</FormLabel>
-              <RadioGroup aria-label="marriageStatus" name="marriageStatus" style={{ display: 'initial' }}>
+              <RadioGroup aria-label="marriageStatus" value={value} onChange={handleChange('marriageStatus')} name="marriageStatus" style={{ display: 'initial' }}>
                 <FormControlLabel
                   value="married"
                   control={<Radio />}

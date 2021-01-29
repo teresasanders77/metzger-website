@@ -91,16 +91,6 @@ export class HighPerformance extends Component {
               variant="outlined"
             />
             <br /><br />
-            <FormLabel component="legend">What else has prevented you from having that dream life?</FormLabel>
-            <TextField
-              onChange={handleChange('prevent')}
-              defaultValue={values.prevent}
-              margin="normal"
-              fullWidth
-              multiline
-              variant="outlined"
-            />
-            <br /><br />
             <FormLabel component="legend">What eating, exercise or general health habits would you like to begin or break in order to feel stronger and more healthy
               physiologically?</FormLabel>
             <TextField
