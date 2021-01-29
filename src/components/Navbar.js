@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from './Button';
+import { Button } from './Button2';
 import Logo from '../images/logo.png'
 import './Navbar.css';
 
