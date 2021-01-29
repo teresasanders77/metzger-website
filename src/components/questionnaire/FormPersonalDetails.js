@@ -32,6 +32,10 @@ export class FormPersonalDetails extends Component {
     this.props.prevStep();
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const { values, handleChange } = this.props;
     return (

@@ -29,6 +29,11 @@ export class FormUserDetails extends Component {
     e.preventDefault();
     this.props.nextStep();
   }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const { value, values, handleChange } = this.props;
     return (

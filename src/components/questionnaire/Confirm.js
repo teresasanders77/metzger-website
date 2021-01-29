@@ -30,6 +30,11 @@ export class Confirm extends Component {
 
     this.props.prevStep();
   }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const { values: {
       fullName,
