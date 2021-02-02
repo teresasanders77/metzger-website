@@ -39,3 +39,12 @@
   color: #fff;
   transition: all 0.3s ease-out;
 }
+
+#submitBtn {
+  background-color: #e0e0e0;
+  color: black; 
+  padding: 8px 22px; 
+  font-size: 0.9375rem;
+  min-width: 64px;
+  line-height: 1.75;
+}
