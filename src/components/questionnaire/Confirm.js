@@ -65,9 +65,11 @@ export class Confirm extends Component {
     emailjs.sendForm('service_thog09r', 'template_05qq247', e.target, 'user_gPHNoNvHZXPJbxdR46FjF')
       .then((result) => {
         console.log(result.text);
+        this.props.nextStep();
       }, (error) => {
         console.log(error.text);
       });
+
   }
 
   render() {
@@ -221,7 +223,7 @@ go in life?"
                         <input type="hidden" className="form-control" name="energy" value={energy} />
                       </div>
                       <ListItemText primary="Do you consistently have enough mental and physical energy needed to excel, accomplish
-your goals, and feel motivated and happy"
+your goals, and feel motivated and happy?"
                         secondary={energy} />
                     </ListItem>
                     <ListItem>
@@ -376,7 +378,7 @@ faster or more efficiently?"
                       size="large"
                       color="main"
                       variant="contained">
-                      <input type="submit" id="submitBtn" value="CONFIRM & CONTINUE" onClick={this.continue}></input>
+                      <input type="submit" id="submitBtn" value="CONFIRM & CONTINUE"></input>
                     </Button>
                   </Box>
                   <br />
